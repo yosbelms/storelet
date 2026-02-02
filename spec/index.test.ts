@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { createElement, FC } from 'react'
 import { renderHook, act } from '@testing-library/react'
 import { createStore } from '../src/index'
