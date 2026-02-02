@@ -1,0 +1,62 @@
+{
+  "name": "storelet",
+  "version": "0.1.1",
+  "description": "Lightweight React state management with immutable updates powered by Mutative",
+  "keywords": [
+    "react",
+    "state",
+    "store",
+    "state-management",
+    "hooks",
+    "immutable",
+    "mutative",
+    "context"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yosbelms/storelet.git"
+  },
+  "homepage": "https://github.com/yosbelms/storelet",
+  "bugs": {
+    "url": "https://github.com/yosbelms/storelet/issues"
+  },
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "type": "commonjs",
+  "sideEffects": false,
+  "files": [
+    "src/**/*.js",
+    "src/**/*.js.map",
+    "src/**/*.d.ts"
+  ],
+  "scripts": {
+    "test": "jest",
+    "build": "tsc --sourceMap -d",
+    "watch": "tsc --sourceMap --watch",
+    "clean": "find src -type f \\( -name \"*.js\" -o -name \"*.js.map\" -o -name \"*.d.ts\" -o -name \"*.d.ts.map\" \\) | grep -v \"./node_modules\" | xargs rm",
+    "prepublishOnly": "npm run clean && npm run test && npm run build",
+    "perf": "ts-node spec/perf.ts"
+  },
+  "author": "yosbelms",
+  "license": "MIT",
+  "dependencies": {
+    "mutative": "^1.1.0",
+    "p-defer": "^4.0.1"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2 || ^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^14.3.1",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.2.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.3.7",
+    "jest": "^30.2.0",
+    "jest-environment-jsdom": "^30.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "ts-jest": "^29.4.6",
+    "typescript": "^5.9.3"
+  }
+}
